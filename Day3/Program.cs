@@ -29,27 +29,23 @@ namespace Day3
         }
         static void Main(string[] args)
         {
-            string text = "abc";
-            char c = text[2];
-            Console.WriteLine(c);
+            Console.WriteLine("Ievadi uzdevuma nr. vai exit, lai iziet no programmas.");
 
-            //Console.WriteLine("Ievadi uzdevuma nr. vai exit, lai iziet no programmas.");
-
-            //string taskNr = Console.ReadLine();
-            //switch (taskNr.Trim())
-            //{
-            //    case "1":
-            //        //Task1();
-            //        break;
-            //    case "2":
-            //        //Task2();
-            //        break;
-            //    case "exit":
-            //        return;
-            //    default:
-            //        Console.WriteLine($"Uzdevums '{ taskNr.Trim() }' neeksistē!");
-            //        break;
-            //}
+            string taskNr = Console.ReadLine();
+            switch (taskNr.Trim())
+            {
+                case "1":
+                    //Task1();
+                    break;
+                case "2":
+                    //Task2();
+                    break;
+                case "exit":
+                    return;
+                default:
+                    Console.WriteLine($"Uzdevums '{ taskNr.Trim() }' neeksistē!");
+                    break;
+            }
         }
     }
 }

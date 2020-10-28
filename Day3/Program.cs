@@ -1,7 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Linq;
-using System.Collections.Generic;
 
 namespace Day3
 {
@@ -9,23 +6,14 @@ namespace Day3
     {
         static void Task1()
         {
-            // Izveidot masīvu
-            // Izvadīt tā saturu uz ekrāna
-            // 1.variants:
-            // for(int i = 0; i < masivs.Length; i++) 
-            // { izvadām masīva elementus }
-            // 2.variants: String.Join
+            int[] array = { 1, 6, 7, 78, 9, 9 };
+            Console.WriteLine(String.Join(", ", array));
         }
         static void Task2()
         {
             // Convert.ToBoolean
             // bool.Parse
 
-        }
-        enum MyEnum
-        {
-            Enum1 = 1,
-            Enum2 = 2
         }
         static void Main(string[] args)
         {
@@ -35,7 +23,7 @@ namespace Day3
             switch (taskNr.Trim())
             {
                 case "1":
-                    //Task1();
+                    Task1();
                     break;
                 case "2":
                     //Task2();

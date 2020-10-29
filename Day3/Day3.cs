@@ -64,6 +64,57 @@ namespace Day3
                     myBoolean = false;
             }*/
         }
+        static void Task4()
+        {
+            Console.WriteLine("Cik reizes?");
+            int times = 0;
+            while(!int.TryParse(Console.ReadLine(), out times) || times <= 0)
+            {
+                Console.WriteLine("Mēģini vēlreiz... (ievadi skaitli, kas ir lielāks par 0");
+            }
+            for (int i = 0; i < times; i++)
+            {
+                Console.WriteLine("Hello world!");
+            }
+        }
+        static void Task5()
+        {
+            int[] array = { 100, 200, 233, 66, 77, 98 };
+            Console.WriteLine($"Pirmais elements: {array[0]}");
+            Console.WriteLine($"Pedējais elements: {array[array.Length - 1]}");
+        }
+        static void Task6()
+        {
+            int[] array = { 7, 4, 7, 3, 6, 9, 2 };
+            Console.WriteLine($"Original: { String.Join(", ", array) }");
+            for(int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == 3)
+                {
+                    array[i] = 10;
+                }
+            }
+            Console.WriteLine($"Edited: { String.Join(", ", array) }");
+        }
+        static void Task7()
+        {
+            string[] array = { "Jānis", "Pēteris", "Andris" };
+            Console.WriteLine(array[1]);
+            array[2] = "Jēkabs";
+        }
+        static void Task8()
+        {
+
+        }
+        static void ExtraTask()
+        {
+            int x;
+            while (!int.TryParse(Console.ReadLine(), out x) || x > 20)
+            {
+                Console.WriteLine("Kļūda! Ievadi skaitli (līdz): ");
+            }
+            
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Ievadi uzdevuma nr. vai exit, lai iziet no programmas.");
@@ -79,6 +130,18 @@ namespace Day3
                     break;
                 case "3":
                     Task3();
+                    break;
+                case "4":
+                    Task4();
+                    break;
+                case "5":
+                    Task5();
+                    break;
+                case "6":
+                    Task6();
+                    break;
+                case "7":
+                    Task7();
                     break;
                 case "exit":
                     return;

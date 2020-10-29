@@ -2,7 +2,7 @@
 
 namespace Day3
 {
-    class Program
+    class Day3
     {
         static void Task1()
         {

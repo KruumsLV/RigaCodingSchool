@@ -102,18 +102,40 @@ namespace Day3
             Console.WriteLine(array[1]);
             array[2] = "Jēkabs";
         }
+        enum NedelasDienas
+        {
+            Pirmdiena,
+            Otrdiena,
+            Tresdiena,
+            Ceturtdiena,
+            Piektdiena,
+            Sestdiena,
+            Svetdiena
+        }
         static void Task8()
         {
-
+            NedelasDienas diena = NedelasDienas.Piektdiena;
+            Console.WriteLine(diena);
         }
         static void ExtraTask()
         {
+            Console.Write("Ievadi skaitli (1-20):");
             int x;
-            while (!int.TryParse(Console.ReadLine(), out x) || x > 20)
+            while (!int.TryParse(Console.ReadLine(), out x) || x > 20 || x < 1)
             {
-                Console.WriteLine("Kļūda! Ievadi skaitli (līdz): ");
+                Console.WriteLine("Kļūda! Ievadi skaitli (1-20): ");
             }
-            
+            int i = 1;
+            while(i <= x)
+            {
+                int j = 1;
+                while(j <= x)
+                {
+                    Console.Write($"{i * j++} ");
+                }
+                i++;
+                Console.WriteLine();
+            }
         }
         static void Main(string[] args)
         {
@@ -142,6 +164,12 @@ namespace Day3
                     break;
                 case "7":
                     Task7();
+                    break;
+                case "8":
+                    Task8();
+                    break;
+                case "extra":
+                    ExtraTask();
                     break;
                 case "exit":
                     return;

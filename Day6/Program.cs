@@ -8,7 +8,7 @@ namespace Day6
         static void Main(string[] args)
         {
             Console.WriteLine("Ievadi uzdevuma nr. vai exit, lai iziet no programmas.");
-
+            // asdsad
             string taskNr = Console.ReadLine();
             switch (taskNr.Trim())
             {

@@ -1,23 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Day7
 {
     class Program
     {
-        private static int Sum(int a, int b)
-        {
-            if (a > b)
-            {
-                return a + b;
-            }
-
-            return a;
-        }
         static void Main(string[] args)
         {
-            Console.WriteLine(Sum(3, 2));
+            Console.WriteLine("Ievadi uzdevuma nr. vai exit, lai iziet no programmas.");
+            string taskNr = Console.ReadLine();
+            switch (taskNr.Trim())
+            {
+                case "1":
+                    TicTacToe.Program.Main(new string[0]);
+                    break;
+                case "2":
+                    Task2.PrintNameSurname("Kristaps Krūmiņš");
+                    Task2.PrintNameSurname("Kristaps", "Krūmiņš");
+                    Task2.PrintNameAge("Kristaps");
+                    Task2.PrintNameAge("Kristaps", 24);
+                    break;
+                case "3":
+                    int[] intArray = { 1, 3, 5, 2, 7, 13 };
+                    string[] stringArray = { "a", "Asd" };
+                    Task3.PrintArrayValues(stringArray);
+                    Task3.PrintArrayValues(intArray);
+                    break;
+                case "4":
+                    string[] nameArray = { "Jānis", "", "Pēteris", "Antons", "", "Andris" };
+                    Task3.PrintArrayValues(nameArray);
+                    nameArray = Task4.GetNonEmptyArray(nameArray);
+                    Task3.PrintArrayValues(nameArray);
+                    break;
+                case "exit":
+                    return;
+                default:
+                    Console.WriteLine($"Uzdevums '{ taskNr.Trim() }' neeksistē!");
+                    break;
+            }
         }
     }
 }

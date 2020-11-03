@@ -2,9 +2,9 @@
 
 namespace TicTacToe
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             //laukums, divdimensiju masivs, 3x3 
             FieldEnum[,] board = GetEmptyBoard();

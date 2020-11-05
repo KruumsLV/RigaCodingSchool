@@ -14,12 +14,12 @@ namespace Day7
             List<string> list = new List<string>();
             foreach(string item in array)
             {
-                if (!String.IsNullOrEmpty(item))
+                if (!String.IsNullOrWhiteSpace(item))
                 {
                     list.Add(item);
                 }
             }
-            
+
             return list.ToArray();
         }
     }

@@ -26,10 +26,15 @@ namespace Day7
                     Task3.PrintArrayValues(intArray);
                     break;
                 case "4":
-                    string[] nameArray = { "Jānis", "", "Pēteris", "Antons", "", "Andris" };
+                    string[] nameArray = { "Jānis", "   ", "Pēteris", "Antons", "", "Andris" };
                     Task3.PrintArrayValues(nameArray);
                     nameArray = Task4.GetNonEmptyArray(nameArray);
                     Task3.PrintArrayValues(nameArray);
+                    break;
+                case "5":
+                    Console.WriteLine(Task5.CalculateSum(3, 5));
+                    Console.WriteLine(Task5.CalculateSum(556, 127));
+                    Console.WriteLine(Task5.CalculateSum(-13, 17));
                     break;
                 case "exit":
                     return;

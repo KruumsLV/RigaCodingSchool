@@ -5,11 +5,6 @@ namespace Day9
     class Car
     {
         // definēt klases laukus (attribute)
-        private string make;
-        private string model;
-        private float price;
-        private string color;
-        private int year;
 
         // Properties
         public string Make { get; set; }
@@ -29,7 +24,7 @@ namespace Day9
             this.Year = year;
         }
         // public string GetString()...
-        public string GetString()
+        public override string ToString()
         {
             return $"{this.Make}, {this.Model}, {this.Price:0.##}, {this.Color}, {this.Year}";
         }

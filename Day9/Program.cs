@@ -29,7 +29,7 @@ namespace Day9
             
             foreach (Car car in mostExpensiveCars)
             {
-                Console.WriteLine(car.GetString());
+                Console.WriteLine(car.ToString());
             }
 
 /*           Car expensiveCar = new Car();

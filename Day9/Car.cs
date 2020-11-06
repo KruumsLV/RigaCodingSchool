@@ -4,12 +4,19 @@ namespace Day9
 {
     class Car
     {
-        // definēt klases laukus
-        public string Make;
-        public string Model;
-        public float Price;
-        public string Color;
-        public int Year;
+        // definēt klases laukus (attribute)
+        private string make;
+        private string model;
+        private float price;
+        private string color;
+        private int year;
+
+        // Properties
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public float Price { get; set; }
+        public string Color { get; set; }
+        public int Year { get; set; }
 
         public Car() { }
 
